@@ -1,0 +1,10 @@
+<nav>
+  <a routerLink="/home">Home</a>
+  <a routerLink="/enter-day">Enter day data</a>
+  <a routerLink="/get-day">Get day</a>
+  <a routerLink='/delete-day'>Delete day</a>
+  <a routerLink='/plot-days'>Visual days data</a>
+  <a routerLink='/days-analyzer'>Days analyzer</a>
+  <button (click)="logout()" *ngIf="currentUser">Log out</button>
+</nav>
+<router-outlet></router-outlet>

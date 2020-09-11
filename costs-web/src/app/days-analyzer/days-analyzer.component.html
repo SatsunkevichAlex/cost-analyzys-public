@@ -1,0 +1,17 @@
+<h1>Days analyzer</h1>
+<div class="form-group">
+    <label for="options">Analyzer options</label>
+    <select class="form-control" id="options" [(ngModel)]="option" (change)="addAdditionInput($event.target.value)">
+        <option selected="selected" hidden>Choose here</option>
+        <option *ngFor="let opt of options" [value]="opt">{{opt}}</option>
+    </select>
+    <form *ngIf=additionalInput>
+        <input id="date-input" type='text' placeholder="enter date here"/>        
+    </form>
+</div>
+<div>
+    <button (click)="submitOptionRequest()">Submit</button>
+</div>
+<div>
+    <pre>{{requestedData | json}}</pre>
+</div>

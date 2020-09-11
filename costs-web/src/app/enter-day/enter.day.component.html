@@ -1,0 +1,31 @@
+<h1>Enter day data</h1>
+<label>Enter day data</label>
+<input type="text" [ngModel]="date | dateFormat"
+(ngModelChange)='date=$event' name=dateInput>
+<br /><label>Enter day shops</label>
+
+<div>
+    <label>Entertainments</label>
+    <table #entertainmentsChild id='entertainments-table'>
+    </table>
+    <button (click)="AddEntertainmentInput()">Add shop</button>
+</div>
+
+<div>
+    <label>Food</label>
+    <table #foodChild id='food-table'>
+    </table>
+    <button (click)="AddFoodInput()">Add shop</button>
+</div>
+
+<div>
+    <label>Household</label>
+    <table #householdChild id='household-table'>
+    </table>
+    <button (click)="AddHouseholdInput()">Add shop</button>
+</div>
+
+<button (click)="SaveBuys()">Save buys</button>
+<div class='saved-day'>
+    <pre>{{savedDay | json}}</pre>
+</div>

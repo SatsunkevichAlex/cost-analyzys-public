@@ -1,0 +1,9 @@
+<h1>Delete day</h1>
+<div name='delete-day'>
+    <label>Delete day by date</label>
+    <input type='text' placeholder="yyyy-MM-dd" [(ngModel)]="dateToDelete">
+    <button (click)="DeleteDay()">Delete</button>
+</div>
+<pre>
+    {{removeStatus | json}}
+</pre>

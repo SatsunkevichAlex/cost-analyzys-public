@@ -1,0 +1,8 @@
+<h1>Get Day</h1>
+<div>
+<h2>Get day by date</h2>
+<p>Use date format "yyyy-MM-dd" for example 2020-02-22</p>
+<input type='text' id='date-input' placeholder="date" [(ngModel)]="dateToFind">
+<button (click)="GetDay()">Get day</button>
+<pre>{{savedDay | json}}</pre>
+</div>
